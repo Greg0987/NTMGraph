@@ -11,7 +11,11 @@ $ python preprocess.py
 ```
 And in the `preprocess.py` you can change the data path. 
 
-The dataset `gossipcop_v3_keep_data_in_proper_length.json` we offered here has 15,729 news. The 0-3,784 are fake news, and the other 3785-1,5729 are real news. Detailes can be seen in [CossipCop-LLM](https://github.com/SZULLM/GossipCop-LLM).
+The dataset `gossipcop_v3_keep_data_in_proper_length.json` we offered here has 15,729 news. 
+
+Just clik the link [gossipcop_v3_keep_data_in_proper_length.json](https://drive.google.com/file/d/1I0ZLKxlblGmZxTI5rV9vDcWcmJf3uIeu/view?usp=drive_link) to download it.
+
+The 0-3,784 are fake news, and the other 3785-1,5729 are real news. Detailes can be seen in [CossipCop-LLM](https://github.com/SZULLM/GossipCop-LLM).
 
 # 2. Run the NTM model
 ```bash
@@ -37,7 +41,7 @@ Then you can get different 16 graphs of 16 topics in `data/sparse_matrix_topic_{
 ```bash
 $ python main.py
 ```
-After that you will see the scores print on the terminal, and you also can see the epoch-accuracy graph on the tensorboard.
+After that you will see the scores print on the terminal, and you can see the epoch-accuracy graph on the tensorboard.
 
 More optional arguments can also be seen in `main.py`.
 
