@@ -15,13 +15,47 @@ The dataset `gossipcop_v3_keep_data_in_proper_length.json` we offered here has 1
 
 # 2. Run the NTM model
 ```bash
-cd ntm
-python GSM_run.py --taskname gossipcop
+$ cd ntm
+$ python GSM_run.py --taskname gossipcop
 ```
 Then you will find the model ckpt in `ckpt/`, and change the ckpt path in the next code `embedding.py`.
 ```bash
-python embedding.py
+$ python embedding.py
 ```
 After that you could get the docs embedding under topic in `results/gossipcop_embed.py`, whose size is (n, 16).(The n_topic we set is 16).
 
 The docs of different topic is stored in `results/gossipcop_topic_{i}.txt`, where i is from 0 to 15.
+
+# 3. Construct Topic Aware Graph
+```bash
+$ cd ..
+$ python graph_construct.py
+```
+Then you can get different 16 graphs of 16 topics in `data/sparse_matrix_topic_{j}.npz`, where j is from 0 to 15.
+
+# 4. Training
+```bash
+$ python main.py
+```
+After that you will see the scores print on the terminal, and you also can see them on the tensorboard.
+
+More optional arguments can also be seen in `main.py`.
+
+# Reference
+This work has received assistance from the following. Consider citing their works if you find this repo useful.
+
+```
+@misc{ZLL2020,
+  author = {Leilan Zhang},
+  title = {Neural Topic Models},
+  year = {2020},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/zll17/Neural_Topic_Models}},
+  commit = {f02e8f876449fc3ebffc66f7635a59281b08c1eb}
+}
+```
+```
+https://github.com/SZULLM/GossipCop-LLM
+```
+
