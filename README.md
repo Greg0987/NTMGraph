@@ -24,20 +24,20 @@ $ python embedding.py
 ```
 After that you could get the docs embedding under topic in `results/gossipcop_embed.py`, whose size is (n, 16).(The n_topic we set is 16).
 
-The docs of different topic is stored in `results/gossipcop_topic_{i}.txt`, where i is from 0 to 15.
+The docs of different topic is stored in `results/gossipcop_topic_{i}.txt`, where `i` is from 0 to 15.
 
 # 3. Construct Topic Aware Graph
 ```bash
 $ cd ..
 $ python graph_construct.py
 ```
-Then you can get different 16 graphs of 16 topics in `data/sparse_matrix_topic_{j}.npz`, where j is from 0 to 15.
+Then you can get different 16 graphs of 16 topics in `data/sparse_matrix_topic_{j}.npz`, where `j` is from 0 to 15.
 
 # 4. Training
 ```bash
 $ python main.py
 ```
-After that you will see the scores print on the terminal, and you also can see them on the tensorboard.
+After that you will see the scores print on the terminal, and you also can see the epoch-accuracy graph on the tensorboard.
 
 More optional arguments can also be seen in `main.py`.
 
