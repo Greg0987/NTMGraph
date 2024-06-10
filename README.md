@@ -1,5 +1,5 @@
 # NTMGraph
-The data and code of paper Topic Aware Graph
+The data and code of paper Topic Aware Graph.
 
 # 1. Preprocess the data Gossipcop
 The format of dataset of the model NTM we used is in `ntm/data/gossipcop_lines.txt`, which you can find that each line in the txt file is one doc of your datas.
